@@ -1,0 +1,27 @@
+Step 1: 
+
+DuckDuckGo "short link algorithm"
+
+Brought me this:
+https://www.geeksforgeeks.org/how-to-design-a-tiny-url-or-url-shortener/#
+
+I didn't remember what Bijection stood for, so I spent some time brushing up my technical knowledge here:
+https://en.wikipedia.org/wiki/Bijection
+
+Which makes a lot of sense, since [link] -> [shortLink], a one to one atomic relation, and a converse relation [shortLink] -> [link] that is also atomic.
+
+Wikipedia mentioned cardinality, and finite sets, OK, so far so good. So at this point, I'm just thinking of using a HashMap for memory fetching. Meaning: if input is [linkNumberOne], then that becomes the {key}, and the short URL is stashed in the direct relation to that {key}. Giving a o(1) fetching time for something that is *already* in memory.
+
+Not sure now about how the algorithm performs for shortening it, I'm assuming that it might need to be O(N), since it may need to read all the elements of the link. But the second thing that occurs to me is that maybe I shouldn't even care about that? What I need is to provide a shortened link from a given link, and not decipher the link to it. 
+
+So analyzing the code on how GeeksForGeeks did their Java, I wasn't convinced that a char map would be necessary, but here, I'm already thinking that it cannot be pseudo-random as well (since computers can't make true randoms... yet), because while maybe having a small N for links it's unlikely that links will be the same, when the N is bigger, it definitely WILL happen, and that wouldn't be a bijection relation, nor cardinality. The relations have to be 1:1, and 1:1 alone, no exceptions.
+
+Ok, then I actually NEED something to convert a link to a specific short-link WITHOUT randomizing it, since the relations have to be atomic.
+
+And yes, after analyzing that GeeksForGeeks page a little longer, I see that they tag the time complexity at O(N). Makes sense. Glad I went through this little thought train though, that already clarified a lot about the algorithm, requirements, and possible failure points of it where the requirements wouldn't be met.
+
+
+
+
+
+
