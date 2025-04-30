@@ -21,7 +21,7 @@ Ok, then I actually NEED something to convert a link to a specific short-link WI
 And yes, after analyzing that GeeksForGeeks page a little longer, I see that they tag the time complexity at O(N). Makes sense. Glad I went through this little thought train though, that already clarified a lot about the algorithm, requirements, and possible failure points of it where the requirements wouldn't be met.
 
 
-
+Step 2: 
 
 
 
