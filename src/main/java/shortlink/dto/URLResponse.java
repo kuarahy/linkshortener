@@ -1,9 +1,9 @@
 package shortlink.dto;
 
-public class UrlResponse {
+public class URLResponse {
     private String url;
 
-    public UrlResponse(String url) {
+    public URLResponse(String url) {
         this.url = url;
     }
 

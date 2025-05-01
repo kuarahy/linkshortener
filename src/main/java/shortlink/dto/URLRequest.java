@@ -1,6 +1,6 @@
 package shortlink.dto;
 
-public class UrlRequest {
+public class URLRequest {
     private String url;
 
     // Getters and setters

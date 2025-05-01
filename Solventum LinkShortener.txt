@@ -1,0 +1,45 @@
+Step 1: 
+
+DuckDuckGo "short link algorithm"
+
+Brought me this:
+https://www.geeksforgeeks.org/how-to-design-a-tiny-url-or-url-shortener/#
+
+I didn't remember what Bijection stood for, so I spent some time brushing up my technical knowledge here:
+https://en.wikipedia.org/wiki/Bijection
+
+Which makes a lot of sense, since [link] -> [shortLink], a one to one atomic relation, and a converse relation [shortLink] -> [link] that is also atomic.
+
+Wikipedia mentioned cardinality, and finite sets, OK, so far so good. So at this point, I'm just thinking of using a HashMap for memory fetching. Meaning: if input is [linkNumberOne], then that becomes the {key}, and the short URL is stashed in the direct relation to that {key}. Giving a o(1) fetching time for something that is *already* in memory.
+
+Not sure now about how the algorithm performs for shortening it, I'm assuming that it might need to be O(N), since it may need to read all the elements of the link. But the second thing that occurs to me is that maybe I shouldn't even care about that? What I need is to provide a shortened link from a given link, and not decipher the link to it. 
+
+So analyzing the code on how GeeksForGeeks did their Java, I wasn't convinced that a char map would be necessary, but here, I'm already thinking that it cannot be pseudo-random as well (since computers can't make true randoms... yet), because while maybe having a small N for links it's unlikely that links will be the same, when the N is bigger, it definitely WILL happen, and that wouldn't be a bijection relation, nor cardinality. The relations have to be 1:1, and 1:1 alone, no exceptions.
+
+Ok, then I actually NEED something to convert a link to a specific short-link WITHOUT randomizing it, since the relations have to be atomic.
+
+And yes, after analyzing that GeeksForGeeks page a little longer, I see that they tag the time complexity at O(N). Makes sense. Glad I went through this little thought train though, that already clarified a lot about the algorithm, requirements, and possible failure points of it where the requirements wouldn't be met.
+
+
+Step 2: 
+
+Time analyzing a bit more of the GeeksForGeeks page. I may just copy their short link algo. 
+
+No clue why that thing would work at first. So I dug a bit deeper into it, and found this paper from 2008:
+https://ieeexplore.ieee.org/document/4737287
+
+I didn't read the paper, but the abstract already informed me what I was looking for:
+https://en.wikipedia.org/wiki/Burrows%E2%80%93Wheeler_transform
+
+Now it makes a lot of sense. Sorry, I miss school and the HEAVY NERDY side of Computer Science on a daily basis:
+"The Burrows–Wheeler transform (BWT, also called block-sorting compression) rearranges a character string into runs of similar characters. This is useful for compression, since it tends to be easy to compress a string that has runs of repeated characters by techniques such as move-to-front transform and run-length encoding. Importantly, the transformation is reversible, without needing to store any additional data except the position of the first original character. The BWT can thus be used as a "free" preparatory step to improve the efficiency of a text compression algorithm, costing only some additional computation, and is used this way in software such as bzip2."
+
+The fact that it is *reversible* is everything that we need. This algorithm is exactly what we need for this.
+
+Step 3: 
+Yoinked GeekForGeeks code. Adjusted it a bit to make sure I can run a driver in another file, so pretty much took the statics out of it. 
+
+Step 4: 
+Checking if the code has the best possible optimization. 
+
+Step 5: 
