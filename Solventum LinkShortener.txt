@@ -23,5 +23,23 @@ And yes, after analyzing that GeeksForGeeks page a little longer, I see that the
 
 Step 2: 
 
+Time analyzing a bit more of the GeeksForGeeks page. I may just copy their short link algo. 
 
+No clue why that thing would work at first. So I dug a bit deeper into it, and found this paper from 2008:
+https://ieeexplore.ieee.org/document/4737287
 
+I didn't read the paper, but the abstract already informed me what I was looking for:
+https://en.wikipedia.org/wiki/Burrows%E2%80%93Wheeler_transform
+
+Now it makes a lot of sense. Sorry, I miss school and the HEAVY NERDY side of Computer Science on a daily basis:
+"The Burrows–Wheeler transform (BWT, also called block-sorting compression) rearranges a character string into runs of similar characters. This is useful for compression, since it tends to be easy to compress a string that has runs of repeated characters by techniques such as move-to-front transform and run-length encoding. Importantly, the transformation is reversible, without needing to store any additional data except the position of the first original character. The BWT can thus be used as a "free" preparatory step to improve the efficiency of a text compression algorithm, costing only some additional computation, and is used this way in software such as bzip2."
+
+The fact that it is *reversible* is everything that we need. This algorithm is exactly what we need for this.
+
+Step 3: 
+Yoinked GeekForGeeks code. Adjusted it a bit to make sure I can run a driver in another file, so pretty much took the statics out of it. 
+
+Step 4: 
+Checking if the code has the best possible optimization. 
+
+Step 5: 
