@@ -26,7 +26,7 @@ Stack that I want to use:
 - Vercel for deployment
 - Hopefully I can use one of my parked domains for this
 
-ToDo:
+ToDo: </br>
 ☑️ Java Algorithm </br>
 ☐ React Front-End </br>
 ☑️ Spring Boot </br>
