@@ -30,6 +30,7 @@ ToDo:
 ☑️ Java Algorithm </br>
 ☐ React Front-End </br>
 ☑️ Spring Boot </br>
+☑️ Achieve Successfull Build </br>
 ☐ NPM connection to back-end (or a better way) </br>
 ☐ Tests </br>
 ☐ Vercel Deployment </br>
