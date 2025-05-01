@@ -4,12 +4,11 @@ import java.util.*;
 import java.lang.*;
 import java.io.*;
 
-public class BWT
-{
+public class Shortener {
     // Comment for nerdy purposes: https://en.wikipedia.org/wiki/Burrows%E2%80%93Wheeler_transform
 
     // Function to generate a short url from integer ID 
-    public String idToShortURL(int n) 
+    public String toShort(int n) 
     { 
         // Map to store 62 possible characters 
         char map[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789".toCharArray(); 
@@ -30,7 +29,7 @@ public class BWT
     } 
     
     // Function to get integer ID back from a short url 
-    public int shortURLtoID(String shortURL) 
+    public int toID(String shortURL) 
     { 
         int id = 0; // initialize result 
     
