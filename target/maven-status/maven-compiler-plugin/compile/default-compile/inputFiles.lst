@@ -1,8 +1,0 @@
-A:\link-shortener\src\main\java\shortlink\config\AppConfig.java
-A:\link-shortener\src\main\java\shortlink\controller\ShortenerController.java
-A:\link-shortener\src\main\java\shortlink\dto\URLRequest.java
-A:\link-shortener\src\main\java\shortlink\exception\TooManyRequestsException.java
-A:\link-shortener\src\main\java\shortlink\dto\URLResponse.java
-A:\link-shortener\src\main\java\shortlink\ShortLinkApplication.java
-A:\link-shortener\src\main\java\shortlink\config\RateLimiting.java
-A:\link-shortener\src\main\java\shortlink\service\Shortener.java
