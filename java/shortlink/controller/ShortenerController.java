@@ -37,12 +37,13 @@ public class ShortenerController {
         if (!requestSemaphore.tryAcquire()){
             thrown new TooManyRequestsException("Too many concurrent request");
         } try {
-            String shortCode = request/getURL().replace("http://short.est/", ""); 
+            String shortCode = request.getURL().replace("http://short.est/", ""); 
             // Gotta check parked domain and if we can use it, otherwise we can provide a fantasy Link ("You are not alone, take this")
-            int id = shortCode/shortURLToID(shortCode);
-            // No database, so index to look up (isn't that nice for once?)
+            int id = shortCode.shortURLToID(shortCode);
+            // No database, no index to look up (isn't that nice for once?)
             String originalURL = "https://example.com/original-url-from-id-" + id; 
             // Not sure if this is correct at all? Looks wrong. Let's double check that once we have more of a big picture to connect towards
+            return new URLResponse (originalURL);
         } finally {
             requestSemaphore.release();
         }
