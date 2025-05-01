@@ -14,3 +14,13 @@ Stack that I want to use:
 - Maven for running the project
 - Vercel for deployment
 - Hopefully I can use one of my parked domains for this
+
+ToDo:
+[] Java Algorithm
+[] React Front-End
+[] Spring Boot
+[] NPM connection to back-end (or a better way)
+[] Tests
+[] Vercel Deployment
+
+
