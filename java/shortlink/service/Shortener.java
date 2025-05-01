@@ -1,7 +1,8 @@
-// Java program to generate short url from integer id and 
-// integer id back from short url. 
+package shortlink.service;
+
 import java.util.*;
 
+@Service
 public class Shortener {
     // Comment for nerdy purposes: https://en.wikipedia.org/wiki/Burrows%E2%80%93Wheeler_transform
 
