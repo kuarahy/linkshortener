@@ -28,11 +28,28 @@ Stack that I want to use:
 
 ToDo: </br>
 ☑️ Java Algorithm </br>
-☐ React Front-End </br>
 ☑️ Spring Boot </br>
 ☑️ Achieve Successfull Build </br>
-☐ NPM connection to back-end (or a better way) </br>
-☐ Tests </br>
-☐ Vercel Deployment </br>
+☑️ Tests </br>
+☑️ Pass All Test </br>
+❌ React Front-End </br>
+❌ Axios for API connection </br>
+❌ Vercel Deployment </br>
+
+Tests:
+   ```bash
+      mvn test
+
+    Unit Tests for the encoding/decoding algorithm
+
+    Service Tests for business logic
+
+    API Tests for HTTP endpoints
+
+    Rate Limiting Tests for concurrency control
+
+    CLI Integration Tests for user interaction
+
+    Special Feature Test for the easter egg
 
 
