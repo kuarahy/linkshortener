@@ -9,10 +9,17 @@ public class ShortenerAlgorithmService {
 
     public String idToShortURL(int n) {
         if (n == 0) return "";
+
+        /*        
+            StringBuilder instead of StringBuffer since it would perform better for consistent string permutations.
+            While StringBuffer is thread-safe, this class wouldn't be a problem for threading, since you would have to instatiate it 
+            per call, and not trying to change the String on the fly on the same thread.
+        */
         StringBuilder sb = new StringBuilder();
         while (n > 0) {
             int remainder = n % BASE62_SIZE;
             sb.append(BASE62_CHARS.charAt(remainder));
+            // Appending characters in reverse order by parsing the remainder to remove some unnecessary reverse() calls
             n /= BASE62_SIZE;
         }
         return sb.reverse().toString();
