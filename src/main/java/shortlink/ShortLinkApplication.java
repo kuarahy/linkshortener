@@ -29,7 +29,7 @@ public class ShortLinkApplication {
                 }
                 
                 if (input.equalsIgnoreCase("easter egg")) {
-                    System.out.println("See ya, Space Cowboy");
+                    System.out.println("SEE YA, SPACE COWBOY!");
                     printWelcomeMessage();
                     continue;
                 }
