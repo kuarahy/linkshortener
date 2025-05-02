@@ -6,12 +6,17 @@ Solventum Code Challenge.
 - Java 17+
 - Maven 3.6+
 
-## Running the Application
+## Building the Application
 
 1. Clone the repository
-2. Build the project:
+2. Navigate to the location via Terminal
+3. Build the project:
    ```bash
    mvn clean install
+
+## Running the Application
+   ```bash
+   mvn spring-boot:run
 
 Stack Required:
 - Java 
