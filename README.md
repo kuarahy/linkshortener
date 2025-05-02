@@ -13,10 +13,12 @@ Solventum Code Challenge.
 3. Build the project:
    ```bash
    mvn clean install
+   ```
 
 ## Running the Application
    ```bash
    mvn spring-boot:run
+   ```
 
 Stack Required:
 - Java 
@@ -44,17 +46,18 @@ ToDo: </br>
 Tests:
    ```bash
       mvn test
+   ```
 
-    Unit Tests for the encoding/decoding algorithm
+Unit Tests for the encoding/decoding algorithm
 
-    Service Tests for business logic
+Service Tests for business logic
 
-    API Tests for HTTP endpoints
+API Tests for HTTP endpoints
 
-    Rate Limiting Tests for concurrency control
+Rate Limiting Tests for concurrency control
 
-    CLI Integration Tests for user interaction
+CLI Integration Tests for user interaction
 
-    Special Feature Test for the easter egg
+Special Feature Test for the easter egg
 
 
