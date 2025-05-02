@@ -1,11 +1,12 @@
 package shortlink.controller;
 
-import org.springframework.web.bind.annotation.*;
-import shortlink.dto.URLRequest;
-import shortlink.dto.URLResponse;
+import org.springframework.beans.factory.annotation.Value;
 import shortlink.exception.TooManyRequestsException;
+import org.springframework.web.bind.annotation.*;
 import shortlink.service.ShortenerService;
 import java.util.concurrent.Semaphore;
+import shortlink.dto.URLResponse;
+import shortlink.dto.URLRequest;
 
 @RestController
 @RequestMapping("/api")
