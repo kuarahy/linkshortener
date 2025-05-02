@@ -11,20 +11,20 @@ Solventum Code Challenge.
 1. Clone the repository
 2. Navigate to the location via Terminal
 3. Build the project:
-   ```bash
-   mvn clean install
-   ```
+```bash
+mvn clean install
+```
 
 ## Running the Application
-   ```bash
-   mvn spring-boot:run
-   ```
+```bash
+mvn spring-boot:run
+```
 
-Stack Required:
+### Stack Required:
 - Java 
 - Spring
 
-Stack that I want to use:
+### Stack that I want to use:
 - Java
 - Spring Boot
 - React for front-end
@@ -33,7 +33,7 @@ Stack that I want to use:
 - Vercel for deployment
 - Hopefully I can use one of my parked domains for this
 
-ToDo: </br>
+### ToDo: </br>
 ☑️ Java Algorithm </br>
 ☑️ Spring Boot </br>
 ☑️ Achieve Successfull Build </br>
@@ -43,21 +43,17 @@ ToDo: </br>
 ❌ Axios for API connection </br>
 ❌ Vercel Deployment </br>
 
-Tests:
-   ```bash
-      mvn test
-   ```
+## Running Tests:
+```bash
+   mvn test
+```
 
+### Tests included
 Unit Tests for the encoding/decoding algorithm
-
 Service Tests for business logic
-
 API Tests for HTTP endpoints
-
 Rate Limiting Tests for concurrency control
-
 CLI Integration Tests for user interaction
-
 Special Feature Test for the easter egg
 
 
