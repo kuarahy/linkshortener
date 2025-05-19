@@ -1,6 +1,6 @@
 # Link Shortener
 
-Solventum Code Challenge.
+I coded this for a code challenge some time ago. It works perfectly if you need a link shortener.
 
 ## Requirements
 - Java 17+
